@@ -59,14 +59,6 @@ class App extends React.Component {
     })
   }
 
-  search = value => {
-    const filteredList = this.state.todoList.filter(item => {
-      return (item.task.toLowerCase().includes(value.toLowerCase()))
-    })
-    return filteredList;
-  }
-
-
   render() {
     const {todoList, searchTerm} = this.state
     const filteredList = todoList.filter(item => (
